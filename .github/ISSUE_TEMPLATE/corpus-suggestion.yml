@@ -1,0 +1,33 @@
+name: Corpus suggestion
+description: Signal an open corpus of transcribed Renaissance text (1450–1700) we may have missed
+title: "[corpus] "
+labels: [corpus-suggestion]
+body:
+  - type: input
+    id: name
+    attributes: {label: Corpus name}
+    validations: {required: true}
+  - type: input
+    id: url
+    attributes: {label: URL}
+    validations: {required: true}
+  - type: input
+    id: languages
+    attributes: {label: Language(s)}
+    validations: {required: true}
+  - type: input
+    id: license
+    attributes: {label: License / access conditions, description: "CC-BY? Public domain? Subscription? By request?"}
+    validations: {required: true}
+  - type: input
+    id: size
+    attributes: {label: Rough size, description: "texts / words, best guess"}
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of text
+      options: ["Keyed/corrected transcription", "Uncorrected OCR", "Mixed / unsure"]
+    validations: {required: true}
+  - type: textarea
+    id: why
+    attributes: {label: Why it belongs in the 1450–1700 window, description: "One or two sentences; note if it is encounter-produced (mission imprints etc.)"}
